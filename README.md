@@ -1,4 +1,8 @@
-# Temporal + MongoDB Durable Trial Match
+<p align="center">
+  <img src="assets/banner.svg" alt="Durable Trial Match" width="100%" />
+</p>
+
+# Durable Trial Match
 
 **MongoDB Atlas + Temporal MVP for durable clinical-trial matching with vector search, GeoJSON filtering, crash recovery, and human approval.**
 
@@ -185,10 +189,8 @@ Observer / UI sees the change
 durable-trial-match/
 ├── README.md
 ├── assets/banner.svg
-├── .env.example
 ├── requirements.txt
 ├── config.py
-├── database.py
 ├── worker.py
 ├── activities/
 ├── workflows/
@@ -200,6 +202,25 @@ durable-trial-match/
 
 No separate giant design `.md` file. The architecture is represented by the code that implements it.
 
+## Demo configuration
+
+Everything is intentionally in one place: [`config.py`](config.py).
+
+```python
+MONGODB_URI = "mongodb+srv://..."
+MONGODB_DB = "durable_trial_match"
+
+VOYAGE_API_KEY = "..."
+VOYAGE_MODEL = "voyage-4"
+
+mongo_client = MongoClient(MONGODB_URI)
+db = mongo_client[MONGODB_DB]
+
+voyage_client = voyageai.Client(api_key=VOYAGE_API_KEY)
+```
+
+There is no `.env`, `getenv`, or separate database helper in this MVP.
+
 ## Quick start
 
 ### 1. Configure Python
@@ -208,17 +229,37 @@ No separate giant design `.md` file. The architecture is represented by the code
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-cp .env.example .env
 ```
 
-Set at minimum:
+Open `config.py` and paste the demo values directly:
+
+```python
+MONGODB_URI = "mongodb+srv://..."
+VOYAGE_API_KEY = "..."
+```
+
+`config.py` creates the shared MongoDB database handle and Voyage client used by the demo.
+
+### 2. Verify MongoDB Atlas
+
+You can either put the Atlas URI in `.env`:
 
 ```bash
 MONGODB_URI="mongodb+srv://..."
-VOYAGE_API_KEY="..."
+MONGODB_DB="durable_trial_match"
 ```
 
-### 2. Start Temporal locally
+and verify it:
+
+```bash
+python scripts/check_atlas.py
+```
+
+or launch Streamlit and enter the Atlas connection string directly in the sidebar. The UI performs an Atlas `ping` before loading any MongoDB-backed screens.
+
+> The Temporal worker and command-line scripts still use `.env`, so for the full end-to-end demo set `MONGODB_URI` there as well.
+
+### 3. Start Temporal locally
 
 ```bash
 temporal server start-dev

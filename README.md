@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="assets/banner.svg" alt="Durable Trial Match" width="100%" />
-</p>
-
 # Durable Trial Match
 
 **MongoDB Atlas + Temporal MVP for durable clinical-trial matching with vector search, GeoJSON filtering, crash recovery, and human approval.**

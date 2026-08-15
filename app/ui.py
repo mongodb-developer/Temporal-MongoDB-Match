@@ -11,30 +11,13 @@ st.set_page_config(
     layout="wide",
 )
 
-st.markdown(
-    '''
-    <style>
-      .hero {
-        padding: 1.25rem 1.5rem;
-        border-radius: 18px;
-        background: linear-gradient(115deg, #0d1117 0%, #14221a 48%, #24163a 100%);
-        border: 1px solid rgba(0,237,100,.25);
-        margin-bottom: 1rem;
-      }
-      .hero h1 { color: white; margin: 0; }
-      .hero p { color: #c9d1d9; margin: .4rem 0 0 0; }
-      .mongo { color: #00ED64; font-weight: 700; }
-      .temporal { color: #A78BFA; font-weight: 700; }
-    </style>
+from pathlib import Path
 
-    <div class="hero">
-      <h1>🧬 Durable Trial Match</h1>
-      <p><span class="mongo">MongoDB Atlas</span> +
-      <span class="temporal">Temporal</span> — synthetic clinical-trial matching
-      with durable execution.</p>
-    </div>
-    ''',
-    unsafe_allow_html=True,
+ASSET_ROOT = Path(__file__).resolve().parents[1] / "assets"
+
+st.image(
+    str(ASSET_ROOT / "banner.svg"),
+    use_container_width=True,
 )
 
 st.warning(

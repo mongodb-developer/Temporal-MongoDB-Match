@@ -1,0 +1,103 @@
+[
+  {
+    "_id": "patient-demo-001",
+    "age": 54,
+    "stage": "III",
+    "diagnosis": "synthetic NSCLC",
+    "symptoms": [
+      "persistent cough",
+      "fatigue",
+      "shortness of breath"
+    ],
+    "medications": [
+      "demo-drug-a",
+      "demo-drug-b"
+    ],
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -87.6298,
+        41.8781
+      ]
+    }
+  },
+  {
+    "_id": "patient-demo-002",
+    "age": 67,
+    "stage": "IV",
+    "diagnosis": "synthetic NSCLC",
+    "symptoms": [
+      "fatigue",
+      "chest discomfort"
+    ],
+    "medications": [
+      "demo-drug-c"
+    ],
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -87.9065,
+        43.0389
+      ]
+    }
+  },
+  {
+    "_id": "patient-demo-003",
+    "age": 29,
+    "stage": "II",
+    "diagnosis": "synthetic melanoma",
+    "symptoms": [
+      "skin lesion",
+      "fatigue"
+    ],
+    "medications": [
+      "demo-drug-d"
+    ],
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -86.1581,
+        39.7684
+      ]
+    }
+  },
+  {
+    "_id": "patient-demo-004",
+    "age": 74,
+    "stage": "III",
+    "diagnosis": "synthetic NSCLC",
+    "symptoms": [
+      "persistent cough"
+    ],
+    "medications": [
+      "demo-drug-e"
+    ],
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -83.0458,
+        42.3314
+      ]
+    }
+  },
+  {
+    "_id": "patient-demo-005",
+    "age": 45,
+    "stage": "III",
+    "diagnosis": "synthetic breast cancer",
+    "symptoms": [
+      "fatigue",
+      "localized pain"
+    ],
+    "medications": [
+      "demo-drug-f"
+    ],
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -90.1994,
+        38.627
+      ]
+    }
+  }
+]

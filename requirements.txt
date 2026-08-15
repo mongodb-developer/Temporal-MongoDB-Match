@@ -1,6 +1,0 @@
-pymongo[srv]>=4.17,<5
-temporalio>=1.18,<2
-voyageai>=0.3
-python-dotenv>=1.0
-streamlit>=1.40
-openai>=2.0

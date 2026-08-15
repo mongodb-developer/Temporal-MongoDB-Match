@@ -1,4 +1,4 @@
-###A small MongoDB Atlas + Temporal MVP that demonstrates production-oriented RAG and agent workflows using a **synthetic clinical-trial matching** scenario.
+##A small MongoDB Atlas + Temporal MVP that demonstrates production-oriented RAG and agent workflows using a **synthetic clinical-trial matching** scenario.
 
 Most AI demos prove that an LLM can answer a question. This project proves three harder things:
 

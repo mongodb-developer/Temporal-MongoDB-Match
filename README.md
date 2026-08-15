@@ -1,8 +1,4 @@
-A small MongoDB Atlas + Temporal MVP that demonstrates production-oriented RAG and agent workflows using a **synthetic clinical-trial matching** scenario.
-
-> **Demo only:** This project uses synthetic patient and clinical-trial data. It is not intended for diagnosis, treatment, or real clinical decision-making.
-
-## Why this demo exists (motivated from Buildfest and meeting the Temporal team)
+###A small MongoDB Atlas + Temporal MVP that demonstrates production-oriented RAG and agent workflows using a **synthetic clinical-trial matching** scenario.
 
 Most AI demos prove that an LLM can answer a question. This project proves three harder things:
 

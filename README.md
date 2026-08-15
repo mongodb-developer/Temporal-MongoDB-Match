@@ -1,20 +1,3 @@
-##A small MongoDB Atlas + Temporal MVP that demonstrates production-oriented RAG and agent workflows using a **synthetic clinical-trial matching** scenario.
-
-Most AI demos prove that an LLM can answer a question. This project proves three harder things:
-
-1. **MongoDB can combine strict operational filters with semantic retrieval.**
-2. **Temporal can recover an interrupted multi-step AI workflow without re-running completed expensive steps.**
-3. **A long-running workflow can safely pause for human approval while MongoDB remains the operational source of truth for the UI.**
-
-The division of responsibility is intentionally simple:
-
-- **MongoDB Atlas**: patient/trial operational data, GeoJSON, structured filters, vector search, workflow-facing application state, and Change Streams.
-- **Voyage AI**: embeddings for trial eligibility text and patient-match queries.
-- **Temporal**: durable ingestion, retries, crash recovery, workflow state, and human-in-the-loop waiting.
-- **LLM**: extraction and final grounded summary generation.
-
----
-
 ## The three demo moments
 
 ### 1. Hybrid metadata pre-filtering + vector search

@@ -346,6 +346,11 @@ The included data intentionally contains:
 
 That makes **hard filtering vs semantic ranking** visible during the demo.
 
+## Run instructions 
+Terminal 1 → temporal server start-dev
+Terminal 2 → python3.10 worker.py
+Terminal 3 → python3.10 -m streamlit run app/ui2.py
+
 ## The point
 
 > **MongoDB owns the operational truth and retrieval. Temporal owns reliable execution across that truth.**
